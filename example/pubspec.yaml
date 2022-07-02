@@ -1,6 +1,6 @@
-name: example
-description: A new Flutter project.
-
+name: gradient_progress_bar
+description: Customizable Gradient progress indicator
+homepage: https://github.com/urvashikharecha/gradient_progress_bar
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
