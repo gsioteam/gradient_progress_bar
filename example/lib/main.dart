@@ -7,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
+  // Demo of gradient_progress_bar
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
