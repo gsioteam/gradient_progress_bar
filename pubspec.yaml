@@ -1,10 +1,9 @@
 name: gradient_progress_bar
 description: Customizable Gradient progress indicator
-homepage: https://github.com/urvashikharecha/gradient_progress_bar
+homepage: https://github.com/urvashik-7span/gradient_progress_bar
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: https://github.com/urvashikharecha/gradient_progress_bar
-version: 0.0.1
+version: 1.0.1
 
 
 environment:

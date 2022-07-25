@@ -7,6 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
   // Demo of gradient_progress_bar
   @override
   Widget build(BuildContext context) {
@@ -30,6 +31,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  double value = 0.0;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,20 +45,30 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
+          child: SizedBox(
+        width: 300,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            GradientProgressIndicator([
+          children: <Widget>[
+            GradientProgressIndicator(const [
               Color(0xffF68270),
               Color(0xffF1C358),
               Color(0xffEFDE62),
               Color(0xffE5F3BE),
               Color(0xffCDE8F1),
               Color(0xffDDC5EE),
-              Color(0xffF2E0F9),
-            ], 0.6)
+              Color(0xffF2E300),
+            ], value)
           ],
         ),
+      )),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.play_arrow),
+        onPressed: () {
+          setState(() {
+            value = 0.7;
+          });
+        },
       ),
     );
   }

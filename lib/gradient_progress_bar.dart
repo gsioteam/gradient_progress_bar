@@ -7,12 +7,10 @@ class GradientProgressIndicator extends StatefulWidget {
 
   final double value;
 
-  const GradientProgressIndicator(this.colors, this.value, {Key? key})
-      : super(key: key);
+  const GradientProgressIndicator(this.colors, this.value, {Key? key}) : super(key: key);
 
   @override
-  _GradientProgressIndicatorState createState() =>
-      _GradientProgressIndicatorState();
+  _GradientProgressIndicatorState createState() => _GradientProgressIndicatorState();
 }
 
 class _GradientProgressIndicatorState extends State<GradientProgressIndicator> {
@@ -41,7 +39,8 @@ class _GradientProgressIndicatorState extends State<GradientProgressIndicator> {
           child: Row(
             children: [
               AnimatedContainer(
-                duration: const Duration(milliseconds: 250),
+                curve: Curves.linear,
+                duration: const Duration(seconds: 1),
                 width: widthToApply,
                 child: ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(50.0)),
@@ -80,8 +79,7 @@ class _GradientProgressInternal extends StatelessWidget {
         width: double.infinity,
         height: _kLinearProgressIndicatorHeight,
       ),
-      decoration:
-          BoxDecoration(gradient: LinearGradient(colors: colorsToApply)),
+      decoration: BoxDecoration(gradient: LinearGradient(colors: colorsToApply)),
     );
   }
 }
