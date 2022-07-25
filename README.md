@@ -18,7 +18,7 @@ To use this package :
 ```
 ## Screenshots
 
-!["Screenshot_1](assets/screenshot_1.png)
+![Screenshot_1](https://github.com/urvashik-7span/gradient_progress_bar/blob/main/assets/screenshot_1.png?raw=true)
 
 ### How to use
 
