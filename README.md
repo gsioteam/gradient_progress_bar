@@ -18,7 +18,7 @@ To use this package :
 ```
 ## Screenshots
 
-![Screenshot_1](assets/screenshot_1.png =250x)
+![Screenshot_1](assets/screenshot_1.png|width=100px)
 
 ### How to use
 
