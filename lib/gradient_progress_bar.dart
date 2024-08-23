@@ -4,11 +4,18 @@ import 'package:flutter/material.dart';
 
 class GradientProgressIndicator extends StatefulWidget {
   final List<Color> colors;
+  final Color backgroundColor;
+  final Duration animationDuration;
 
   final double value;
 
-  const GradientProgressIndicator(this.colors, this.value, {Key? key})
-      : super(key: key);
+  const GradientProgressIndicator({
+    super.key,
+    required this.colors,
+    required this.value,
+    this.backgroundColor = const Color(0x55FFC56F),
+    this.animationDuration = const Duration(seconds: 1),
+  });
 
   @override
   _GradientProgressIndicatorState createState() =>
@@ -35,14 +42,14 @@ class _GradientProgressIndicatorState extends State<GradientProgressIndicator> {
           height: 10,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: const Color(0xffFFC56F).withOpacity(0.3),
+            color: widget.backgroundColor,
             borderRadius: const BorderRadius.all(Radius.circular(50.0)),
           ),
           child: Row(
             children: [
               AnimatedContainer(
                 curve: Curves.linear,
-                duration: const Duration(seconds: 1),
+                duration: widget.animationDuration,
                 width: widthToApply,
                 child: ClipRRect(
                   borderRadius: const BorderRadius.all(Radius.circular(50.0)),
